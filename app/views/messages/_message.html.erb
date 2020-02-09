@@ -1,21 +1,21 @@
 <div class="card">
-  <div class="card-content">
-		<div class="tabs-page is-show js-tabs-page 								js-tabs-page_design">
-      <article class="media">
+	<div class="card-content">
+		<div class="tabs-page is-show js-tabs-page js-tabs-page_design">
+			<article class="media">
 				<figure class="media-left">
 					<p class="image is-64x64">
 						<%= image_tag 'cat.png' %>
 					</p>
 				</figure>
-				<div class="media-content chat-style">
-					<p class="title is-5">
-						<%= message.user.username %>
-					</p>
-					<div class="content font-style">
-							<%= message.body %>     
-					</div>	
+				<div class="media-content media-body">
+					<div class="content chat-style">
+						<p>
+							<strong><%= message.user.username %></strong>
+							<br/><%= message.body %> 
+						</p>
+					</div>
 				</div>
 			</article>
-  </div>
+		</div>
+	</div>
 </div>
-
