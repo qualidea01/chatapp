@@ -1,10 +1,17 @@
 // Place all the styles related to the chatroom controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-.chatbox {
-	height: 750px;
-	background-color: #beb5b5;
+.chat-style {
+	padding: 5px 10px;
+  background-color: #98fb98;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #555;
+  left: 10%;
+  right: 10%;
 }
 
+.font-style {
+	padding-left: 70px;
+	font-size: large;
+}
