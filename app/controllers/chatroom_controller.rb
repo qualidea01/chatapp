@@ -3,7 +3,4 @@ class ChatroomController < ApplicationController
 		@messages = Message.all
 		@users = User.all
 	end
-
-	def show
-	end
 end
