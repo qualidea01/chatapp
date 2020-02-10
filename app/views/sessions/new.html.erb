@@ -1,32 +1,28 @@
-<div class="container">
-  <div class="section">
-    <h1 class="title is-1 titlecolor">ようこそChatappへ</h1>
-      <h1 class="subtitle is-4">下のフォームからログインしてください</h1>	
-      <br>
-    <div class="field">
-      <p class="control has-icons-left has-icons-right">
-        <input class="input" type="email" placeholder="Email">
-        <span class="icon is-small is-left">
-          <i class="fas fa-envelope"></i>
-        </span>
-      </p>
-    </div>
-    <div class="field">
-      <p class="control has-icons-left">
-        <input class="input" type="password" placeholder="Password">
-        <span class="icon is-small is-left">
-          <i class="fas fa-lock"></i>
-        </span>
-      </p>
-    </div>
-    <div class="field">
-      <p class="control">
-        <button class="button is-success">
-          ログイン
-        </button>
-      </p>
-    </div>
+<%= form_for(:session, url: login_path) do |f| %>
+  <div class="container">
+    <div class="section">
+      <h1 class="title is-1 titlecolor">ようこそChatappへ</h1>
+        <h1 class="subtitle is-4">下のフォームからログインしてください</h1>	
+        <br>
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+            <%= f.label :email %>
+            <%= f.email_field :email, class:"input", type:"email", placeholder:"メールアドレスを入力してください"%>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left">
+            <%= f.label :password %>
+            <%= f.email_field :password, class:"input", type:"password", placeholder:"パスワードを入力してください"%>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+            <%= f.submit "ログイン", class: "button is-success" %>
+        </p>
+      </div>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
 
