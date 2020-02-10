@@ -4,7 +4,6 @@
         <a class="navbar-item is-size-2">
         Chatapp
         </a>
-
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" @click="isOpen = !isOpen" v-bind:class="{'is-active': isOpen}">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -13,28 +12,24 @@
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu" v-bind:class="{'is-active': isOpen}">
-        <div class="navbar-start">
+      <div class="navbar-start">
         <a class="navbar-item">
             マイページ
         </a>
-
         <a class="navbar-item">
             チャット広場
         </a>
-        </div>
-
+      </div>
         <div class="navbar-end">
-        <div class="navbar-item">
-            <div class="buttons">
-            <a class="button is-primary">
-                <strong>会員登録</strong>
-            </a>
-            <a class="button is-light">
-                ログイン
-            </a>
-            </div>
+          <div class="navbar-item">
+            <% if logged_in? %>
+                <%= link_to "ログアウト", logout_path, method: :delete, class: "button is-primary" %>
+            <% else %>
+                <%= link_to "ログイン", login_path, class: "button is-light"%>
+            <% end %>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
   </nav>
 </div>
