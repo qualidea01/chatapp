@@ -10,16 +10,13 @@
 		<div class="media-content">
 			<div class="field has-addons">
 				<div class="control is-expanded">
-						<input
-							class="input"
-							type="text"
-							placeholder="コメントを入力してください"
-						/>
+					<%= form_for(@message, url: message_path) do |f| %>
+						<%= f.text_field :body, class: "input", placeholder: "コメントを入力してください" %>
 				</div>
 				<div class="control">
-					<a class="button is-info">
-							Send
+						<%= f.submit "送信", class: "button is-info"%>		
 					</a>
+					<% end %>
 				</div>
 			</div>
 		</div>
