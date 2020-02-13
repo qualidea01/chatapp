@@ -1,11 +1,13 @@
 <% if flash[:notice] %>
 	<div class="notification is-primary is-light">
-		<%= flash[:notice] %>
+		<button class="delete"></button>
+			<%= flash[:notice] %>
 	</div>
 <% end %>
 
 <% if flash[:danger] %>
 	<div class="notification is-danger is-light">
-		<%= flash[:danger] %>
+		<button class="delete"></button>
+			<%= flash[:danger] %>
 	</div>
 <% end %>
