@@ -2,7 +2,6 @@
 
 <div class="section">
 	<div class="container">			
-	</div>
 		<%= render @messages %>
 	</div>
 	<br>
@@ -14,8 +13,7 @@
 						<%= f.text_field :body, class: "input", placeholder: "コメントを入力してください" %>
 				</div>
 				<div class="control">
-						<%= f.submit "送信", class: "button is-info"%>		
-					</a>
+					<%= f.submit "送信", class: "button is-info"%>		
 					<% end %>
 				</div>
 			</div>
